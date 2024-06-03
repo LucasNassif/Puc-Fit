@@ -2,15 +2,15 @@
 
 `CURSO: Sistemas de Informação`
 
-`DISCIPLINA: Projeto - Aplicações Web`
+`DISCIPLINA: Projeto - Design Centrad no Usuário`
 
-`SEMESTRE: 1º`
+`SEMESTRE: 3º`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
+* Lucas de Souza Nassif Lemos 
 * Nome completo do aluno 2
 * Nome completo do aluno 3
 * Nome completo do aluno 4
@@ -18,21 +18,11 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Orientador
 
-* Nome completo do professor 1
+* Simone de Assis Alves da Silva 
 
-# Planejamento
+# Design
 
-| Etapa         | Atividades |
-|  :----:   | ----------- |
-| ETAPA 1         |[Documentação de Contexto](docs/context.md) <br> [Especificação do Projeto](docs/especification.md) |
-| ETAPA 2         |[Projeto de Interface](docs/interface.md) <br> [Template Padrão](docs/template.md) |
-| ETAPA 3         |[Programação de Funcionalidades - HTML e CSS](docs/development.md) |
-| ETAPA 4        |[Programação de Funcionalidades - Javascript](docs/development.md) <br> [Testes de Software ](docs/tests.md) |
-| ETAPA 5         | [Apresentação](presentation/README.md) |
-
-# Código
-
-<li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="[src/README.md](https://www.figma.com/design/nvJRiuztnp9fFOJ84fEIH2/PUC-FIT?node-id=0-1)"> Figma</a></li>
 
 # Apresentação
 
