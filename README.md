@@ -2,7 +2,7 @@
 
 `CURSO: Sistemas de Informação`
 
-`DISCIPLINA: Projeto - Design Centrad no Usuário`
+`DISCIPLINA: Projeto - Design Centrado no Usuário`
 
 `SEMESTRE: 3º`
 
