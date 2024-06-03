@@ -10,8 +10,8 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
+* Déborah Thaís de Matos
 * Lucas de Souza Nassif Lemos 
-* Nome completo do aluno 2
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 * Nome completo do aluno 5
