@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.phone-frame {
+    width: 360px;
+    height: 800px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.status-bar {
+    height: 20px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.status-bar .time {
+    margin-left: 10px;
+}
+
+.status-bar .status-icons {
+    display: flex;
+    align-items: center;
+}
+
+.status-bar .status-icons img {
+    height: 15px;
+    margin-left: 10px;
+}
+
+.container {
+    width: 360px;
+    height: 780px;
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #2C363F;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header img {
+    height: 30px;
+}
+
+.header .icons {
+    display: flex;
+    gap: 10px;
+}
+
+.header .icons img {
+    height: 24px;
+    cursor: pointer;
+}
+
+.class-info {
+    background-color: #0CA789;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-icons {
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-edit-add{
+    padding: 15px;
+}
+.day-hour{
+    margin-left: 15px;
+}
+.list{
+    height: 1px;
+    background-color: #000000;
+}
+.class-info h3 {
+    margin: 0;
+}
+
+.class-info p {
+    margin: 0;
+}
+
+.class-info .edit-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.class-info .edit-icons img {
+    height: 24px;
+    cursor: pointer;
+}
+
+.class-list {
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.class-list .student {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.class-list .student img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.class-list .student.instructor {
+    background-color: #e0f2f1;
+}
