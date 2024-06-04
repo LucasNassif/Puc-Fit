@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC FIT Login</title>
+    <link rel="stylesheet" href="Tela-de-login.css">
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+</head>
+<body>
+    <main class="login-container">
+        <div class="login-box">
+            <h1 class="login-title">PUC FIT <img src="Imagens/Vector.png" alt="Icon" class="icon"></h1>
+            <form id="loginForm">
+                <input type="text" id="email" name="email" placeholder="E-mail" required>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                <button type="submit"><span>Entrar</span></button>
+                <p class="link">
+                    Ainda não tem conta?
+                    <a href="../Adicionar Usuário/adicionarUsuario.html">Cadastre-se</a>
+                </p>
+                <p id="error-message" class="error-message"></p>
+            </form>
+        </div>
+    </main>
+    <script src="Tela-de-login.js" defer></script>
+</body>
+</html>

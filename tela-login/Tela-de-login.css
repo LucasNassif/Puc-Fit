@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Inter';
+    background-color: #e0f7fa;
+    background-image: url('Imagens/Component 17.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 18px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 328px;
+    height: auto;
+}
+
+.login-box {
+    text-align: center;
+    width: 328px;
+    position: relative;
+}
+
+.login-title {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-style: normal;
+    font-size: 36px;
+    margin-bottom: 1rem;
+    color: #EFF1F3;
+    position: relative;
+    line-height: 33px;
+}
+
+.login-title::after {
+    content: '';
+    display: block;
+    width: 328px;
+    height: 3px;
+    background-color: #EFF1F3;
+    margin: 0.5rem auto 0; /* Centraliza a linha horizontalmente */
+}
+
+.icon {
+    width: 56.7px;
+    height: 34px;
+    margin-left: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 2rem); /* Ajusta a largura dos campos de entrada */
+    padding: 0.5rem;
+    margin: 0.5rem auto; /* Centraliza os campos horizontalmente */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #676E75;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+button {
+    width: 187px;
+    height: 48.64px;
+    margin-top: 1rem;
+    background: #2C363F;
+    border: 1px solid #EFF1F3;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+    color: #EFF1F3;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+button span {
+    color: #EFF1F3;
+}
+
+button:hover {
+    background: #004d40;
+}
+
+.link {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    color: #EFF1F3;
+    margin-top: 20px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.link a {
+    color: #EFF1F3;
+    text-decoration: none;
+    font-weight: 600; /* Destaca o link */
+    margin-left: 5px; /* Espaço entre o texto e o link */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transição suave para a cor e a decoração do texto */
+}
+
+.link a:hover {
+    color: #004d40;
+    text-decoration: underline;
+}
+
+/* Adicione isso ao seu arquivo CSS existente */
+
+.error-message {
+    color: #FF0000; /* Cor vermelha para mensagens de erro */
+    font-size: 14px;
+    margin-top: 10px;
+    display: none; /* Esconda por padrão */
+}
+
+button.show-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #676E75;
+}
+
+
+@media screen and (max-width: 480px) {
+    input[type="text"],
+    input[type="password"] {
+        width: 100%; /* Ajusta a largura dos campos de entrada para 100% no modo responsivo */
+    }
+
+    .login-title::after {
+        width: 100%; /* Ajusta a largura da linha para 100% no modo responsivo */
+    }
+}
