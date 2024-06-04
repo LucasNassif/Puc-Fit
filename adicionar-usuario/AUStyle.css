@@ -1,0 +1,345 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #2C363F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.nav-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 33px;
+    font-feature-settings: 'liga' off;
+    color: #0CA789;
+    white-space: nowrap;
+    width: 80%;
+}
+
+.logo img {
+    width: 40px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.logo-content {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    width: 20%;
+    margin-right: auto;
+}
+
+.menu img {
+    width: 30px;
+    height: 30px;
+}
+
+.sino-relogio {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.relogio {
+    margin-right: 10px;
+}
+
+.formulario-cadastro-usuario {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 3px;
+    padding: 1em;
+    position: relative; /* Adiciona posição relativa para alinhar a linha */
+}
+
+.formulario-cadastro-usuario h1 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+    font-feature-settings: 'liga' off;
+    color: #2C363F;
+    border: none;
+    margin: 0 auto; /* Ajusta a margem para posicionar acima do formulário */
+    border-radius: 2px;
+    border-bottom: 4px solid #2C363F;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: center; /* Centraliza o texto */
+    width: 328px; /* Define a largura do título */
+}
+
+.formulario-cadastro-usuario form {
+    margin-top: 20px; /* Adiciona margem entre o título e o formulário */
+}
+
+.formulario-cadastro-usuario hr {
+    margin: 0 auto 20px auto; /* Ajusta a margem da linha */
+    width: 80%; /* Define a largura da linha */
+    border: none;
+    border-bottom: 2px solid #2C363F; /* Cor e espessura da linha */
+}
+
+
+.form_grupo {
+    position: relative;
+    width: 100%;
+    max-width: 328px;
+    margin: 0 auto 20px auto;
+}
+
+.form_grupo::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #EFF1F3;
+    border: 2px solid #A9BCD0;
+    border-radius: 5px;
+}
+
+.form_label {
+    position: absolute;
+    width: calc(100% - 20px);
+    max-width: 308px;
+    height: 47px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    text-align: left;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 47px;
+}
+
+.form_grupo label {
+    margin-left: 10px;
+    margin-top: 5px;
+    color: rgba(17, 21, 28, 0.76);
+}
+
+.form_input {
+    width: calc(100% - 20px);
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    z-index: 1;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.exercise-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    border: 2px solid #11151C;
+    background-color: #FFF;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.exercise-checkbox:checked {
+    background-color: #0CA789;
+}
+
+.form-check label {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    font-feature-settings: 'liga' off;
+    color: #11151C;
+    align-items: flex-start;
+}
+
+.form-check .checkbox-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form_grupo1 {
+    position: relative;
+    width: 100%;
+    max-width: 328px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.form_grupo1::before {
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.submit {
+    width: 100%;
+    max-width: 328px;
+    text-align: center;
+    margin: 0 auto 20px auto;
+}
+
+.submit_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: #0CA789;
+    color: #EFF1F3;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.006em;
+    border-radius: 10px;
+    margin: 20px auto;
+    cursor: pointer;
+    width: 100%;
+    height: 43px;
+}
+
+.submit_btn:hover {
+    background-color: #444444;
+    transform: scale(1.03);
+}
+
+.form_input::placeholder {
+    color: rgba(17, 21, 28, 0.5); /* cor do texto do placeholder */
+    font-family: 'Manrope';
+    font-style: italic; /* estilo do texto do placeholder */
+}
+
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box; /* Melhora o controle do tamanho dos elementos */
+}
+
+/* Responsividade */
+@media (max-width: 360px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 18px;
+    }
+
+    .formulario-cadastro-usuario {
+        padding: 0.5em;
+    }
+
+    .form_grupo {
+        width: 100%;
+    }
+
+    .submit_btn {
+        width: 100%;
+    }
+
+    .form-check {
+        width: 100%;
+    }
+}
