@@ -1,61 +1,81 @@
-const addButton = document.querySelector('.image-edit-add img[alt="Settings"]'); // Seleciona a imagem com alt="Settings"
-const studentList = document.querySelector('.class-list'); // Seleciona o elemento ".class-list"
+document.addEventListener('DOMContentLoaded', function () {
+    const addButton = document.querySelector('.image-edit-add img[alt="Settings"]'); // Seleciona a imagem com alt="Settings"
+    const studentList = document.querySelector('.class-list'); // Seleciona o elemento ".class-list"
+    const studentCounter = document.querySelector('.numero'); // Seleciona o contador de alunos
 
-addButton.addEventListener('click', () => {
-  // Cria os elementos para o formulário
-  const form = document.createElement('form');
-  const nameLabel = document.createElement('label');
-  const nameInput = document.createElement('input');
-  const surnameLabel = document.createElement('label');
-  const surnameInput = document.createElement('input');
-  const submitButton = document.createElement('button');
+    addButton.addEventListener('click', () => {
+        // Remove o formulário anterior, se existir
+        const existingFormContainer = document.querySelector('.form-container');
+        if (existingFormContainer) {
+            existingFormContainer.remove();
+        }
 
-  // Configura os elementos do formulário
-  nameLabel.textContent = 'Nome:';
-  nameInput.type = 'text';
-  nameInput.placeholder = 'Digite seu nome';
-  surnameLabel.textContent = 'Sobrenome:';
-  surnameInput.type = 'text';
-  surnameInput.placeholder = 'Digite seu sobrenome';
-  submitButton.textContent = 'Adicionar Aluno';
+        // Cria os elementos para o formulário
+        const formContainer = document.createElement('div');
+        formContainer.classList.add('form-container');
+        const form = document.createElement('form');
+        const nameLabel = document.createElement('label');
+        const nameInput = document.createElement('input');
+        const surnameLabel = document.createElement('label');
+        const surnameInput = document.createElement('input');
+        const submitButton = document.createElement('button');
 
-  // Adiciona os elementos ao formulário
-  form.appendChild(nameLabel);
-  form.appendChild(nameInput);
-  form.appendChild(surnameLabel);
-  form.appendChild(surnameInput);
-  form.appendChild(submitButton);
+        nameLabel.textContent = 'Nome:';
+        nameInput.type = 'text';
+        nameInput.placeholder = 'Digite seu nome';
+        surnameLabel.textContent = 'Sobrenome:';
+        surnameInput.type = 'text';
+        surnameInput.placeholder = 'Digite seu sobrenome';
+        submitButton.textContent = 'Adicionar Aluno';
 
-  // Função para criar o elemento "student"
-  const createStudentElement = (name, surname) => {
-    const student = document.createElement('div');
-    student.classList.add('student');
-    student.innerHTML = `
-      <img src="img/icon-player.png" alt="User Icon">
-      <span>${name} ${surname}</span>
-    `;
-    return student;
-  };
+        form.appendChild(nameLabel);
+        form.appendChild(nameInput);
+        form.appendChild(surnameLabel);
+        form.appendChild(surnameInput);
+        form.appendChild(submitButton);
+        formContainer.appendChild(form);
 
-  // Função para submeter o formulário
-  const submitForm = (event) => {
-    event.preventDefault(); // Evita que a página recarregue
+        const createStudentElement = (name, surname) => {
+            const student = document.createElement('div');
+            student.classList.add('student');
+            student.innerHTML = `
+                <img src="img/icon-player.png" alt="User Icon">
+                <span>${name} ${surname}</span>
+            `;
+            return student;
+        };
 
-    const name = nameInput.value.trim(); // Pega o valor do nome sem espaços
-    const surname = surnameInput.value.trim(); // Pega o valor do sobrenome sem espaços
+        const updateCounter = () => {
+            const numberOfStudents = studentList.children.length;
+            studentCounter.textContent = `${numberOfStudents}/20`;
+        };
 
-    if (name && surname) { // Verifica se ambos os campos estão preenchidos
-      const newStudent = createStudentElement(name, surname);
-      studentList.appendChild(newStudent);
-      form.remove(); // Remove o formulário após a submissão
-    } else {
-      alert('Por favor, preencha o nome e sobrenome do aluno.');
-    }
-  };
+        const submitForm = (event) => {
+            event.preventDefault();
 
-  // Adiciona evento de submissão ao formulário
-  form.addEventListener('submit', submitForm);
+            const name = nameInput.value.trim();
+            const surname = surnameInput.value.trim();
 
-  // Exibe o formulário na tela (você pode escolher como exibi-lo)
-  document.body.appendChild(form);
+            if (name && surname) {
+                const newStudent = createStudentElement(name, surname);
+                studentList.appendChild(newStudent);
+                updateCounter();
+                form.remove(); // Remove o formulário após a submissão
+            } else {
+                alert('Por favor, preencha o nome e sobrenome do aluno.');
+            }
+        };
+
+        form.addEventListener('submit', submitForm);
+
+        const container = document.querySelector('.container');
+        container.insertBefore(formContainer, studentList);
+    });
+
+    // Atualiza o contador ao carregar a página
+    const updateCounter = () => {
+        const numberOfStudents = studentList.children.length;
+        studentCounter.textContent = `${numberOfStudents}/20`;
+    };
+    updateCounter();
 });

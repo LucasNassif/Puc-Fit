@@ -70,10 +70,11 @@ body {
     cursor: pointer;
 }
 
-.management-icon{
+.management-icon {
     margin-left: 5px;
     margin-bottom: 3px;
 }
+
 .management-header {
     background-color: #0CA789;
     color: white;
@@ -100,10 +101,9 @@ body {
     color: rgb(0, 0, 0);
     padding: 10px 5px;
     border-radius: 0 10px 0 0;
-    border: 1px solid#000;
+    border: 1px solid #000;
     cursor: pointer;
     text-align: center;
-    cursor: pointer;
     flex: 1;
 }
 
@@ -111,7 +111,7 @@ body {
     border-radius: 10px 0 0 0;
     background-color: #0CA789;
     color: #ffffff;
-    border: 1px solid#000;
+    border: 1px solid #000;
 }
 
 .search-bar {
@@ -121,11 +121,17 @@ body {
     margin-bottom: 10px;
 }
 
+.add {
+    margin-left: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
 .search-bar input {
     margin-left: 10px;
     width: 30%;
     padding: 5px;
-    border: 1px solid#A9BCD0;
+    border: 1px solid #A9BCD0;
     border-radius: 10px 0 0 10px;
 }
 
@@ -136,7 +142,7 @@ body {
     border: none;
     border-radius: 0 10px 10px 0;
     cursor: pointer;
-    border: 1px solid#A9BCD0;
+    border: 1px solid #A9BCD0;
 }
 
 .search-bar button img {
@@ -172,4 +178,41 @@ body {
 
 .class-list .student.instructor {
     background-color: #e0f2f1;
+}
+
+.form-container {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container label {
+    margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container select,
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    background-color: #0CA789;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #098a6f;
 }
