@@ -13,7 +13,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Déborah Thaís de Matos
 * Lucas de Souza Nassif Lemos 
 * Sibelle Mendes Diniz
-* Nome completo do aluno 4
+* Arthur Neves
 * Nome completo do aluno 5
 
 ## Orientador
