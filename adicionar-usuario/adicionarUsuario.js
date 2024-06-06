@@ -1,4 +1,3 @@
-// Função para salvar os dados de cadastro no localStorage
 function salvarDadosCadastro() {
     const nome = document.getElementById('nome').value;
     const cpf = document.getElementById('cpf').value;
@@ -6,6 +5,7 @@ function salvarDadosCadastro() {
     const email = document.getElementById('email').value;
     const telefone = document.getElementById('telefone').value;
     const endereco = document.getElementById('endereco').value;
+    const senha = document.getElementById('senha').value; // Get the password value
     const adminPrivileges = document.getElementById('admin_privileges').checked;
 
     const novoUsuario = {
@@ -15,6 +15,7 @@ function salvarDadosCadastro() {
         email: email,
         telefone: telefone,
         endereco: endereco,
+        senha: senha, // Add the password to the user object
         adminPrivileges: adminPrivileges
     };
 
@@ -26,6 +27,9 @@ function salvarDadosCadastro() {
 
     // Salva a lista atualizada de usuários no localStorage
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+    console.log('Usuário cadastrado:', novoUsuario); // Log the new user
+    console.log('Todos os usuários:', usuarios); // Log all users
 
     alert('Usuário cadastrado com sucesso!');
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PUC FIT</title>
+    <link rel="stylesheet" href="adicionar-turma.css">
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="cabeçalho">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="menu">
+                    <img src="menu.png" alt="menu" class="img-menu">
+                </div>
+                <h1 class="logo">
+                    <div class="logo-content">
+                        PUC FIT
+                        <img src="Vector (1).png" alt="Icon" class="icon">
+                    </div>
+                </h1>
+                <div class="sino-relogio">
+                    <button class="nav-button relogio" type="button">
+                        <img src="Relogio.png" alt="Relógio">
+                    </button>
+                    <button class="nav-button notification" type="button">
+                        <img src="Sino Branco.png" alt="Notificação">
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <form action="#">
+        <h2>Adicionar Turma</h2>
+
+        <hr class="linha">
+
+        <label for="nomeTurma">
+            <span class="label-text"></span>
+        </label>
+        <input type="text" id="nomeTurma" name="nomeTurma" required placeholder="Nome da Turma: ">
+
+        <label for="dia">
+            <span class="label-text">Dia:</span>
+        </label>
+        <select id="dia" name="dia" >
+            <option value="Nulo"></option>
+            <option value="segunda">Segunda-feira</option>
+            <option value="terca">Terça-feira</option>
+            <option value="quarta">Quarta-feira</option>
+            <option value="quinta">Quinta-feira</option>
+            <option value="sexta">Sexta-feira</option>
+            <option value="sabado">Sábado</option>
+            <option value="domingo">Domingo</option>
+        </select>
+
+        <div class="horario-container">
+            <div class="horario-input">
+                <label for="horarioInicial">
+                    <span class="label-text">Horário Inicial:</span>
+                </label>
+                <input type="time" id="horarioInicial" name="horarioInicial" required>
+            </div>
+        
+            <div class="horario-input">
+                <label for="horarioFinal">
+                    <span class="label-text">Horário Final:</span>
+                </label>
+                <input type="time" id="horarioFinal" name="horarioFnicial" required>
+            </div>
+        </div>
+        
+        <label for="numeroVagas">
+            <span class="label-text"></span>
+        </label>
+        <input type="number" id="numeroVagas" name="numeroVagas" required placeholder="Número de Vagas ">
+        
+
+        <button type="submit">Confirmar</button>
+    </form>
+</body>
+
+</html>
