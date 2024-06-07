@@ -7,51 +7,54 @@
     <link rel="stylesheet" href="turma.css">
 </head>
 <body>
-    <div class="phone-frame">
+    <div class="container">
         <div class="status-bar">
             <span class="time">9:41</span>
             <div class="status-icons">
                 <img src="img/Right Side.png" alt="WiFi and Battery">
             </div>
         </div>
-        <div class="container">
-            <div class="header">
-                <img src="img/menu-icon.png" alt="Menu">
-                <img src="img/Vector-logo.png" alt="PUC FIT Logo">
-                <div class="icons">
-                    <img src="img/clock-icon.png" alt="Clock">
-                    <img src="img/notification.png" alt="Notification">
-                </div>
+        <div class="header">
+            <img src="img/menu-icon.png" alt="Menu">
+            <img src="img/Vector-logo.png" alt="PUC FIT Logo">
+            <div class="icons">
+                <img src="img/clock-icon.png" alt="Clock">
+                <img src="img/notification.png" alt="Notification">
             </div>
-            <div class="class-info">
-                <div>
-                    <h3>Turma 01</h3>
-                </div>
-                <div>
-                    <h3 class="numero">0/20</h3>
-                </div>
-            </div>
-            <div class="edit-icons">
-                <p class="day-hour">Segunda-Feira<br>08:00am - 09:00am</p>
-                <div class="image-edit-add">
-                    <img src="img/edit.png" alt="Edit">
-                    <img src="img/add.png" alt="Settings">
-                </div>
-            </div>
-            <div class="list"></div>
-            <div class="class-list">
-                <div class="student instructor">
-                    <img src="img/icon-player.png" alt="User Icon">
-                    <span>Instrutor 1</span> <span style="margin-left:auto;">Instrutor</span>
-                </div>
-            </div>
-            <ul class="form-list hidden">
-                <li><input type="text" placeholder="Digite seu nome"></li>
-                <li><input type="text" placeholder="Digite seu sobrenome"></li>
-                <li><button>Adicionar Aluno</button></li>
-            </ul>
         </div>
+        <div class="class-info">
+            <div>
+                <h3>Turma 01</h3>
+            </div>
+            <div>
+                <h3 class="numero">0/20</h3>
+            </div>
+        </div>
+        <div class="edit-icons">
+            <p class="day-hour">Segunda-Feira<br>08:00am - 09:00am</p>
+            <div class="image-edit-add">
+                <img src="img/edit.png" alt="Edit" id="editButton">
+                <img src="img/add.png" alt="Settings">
+            </div>
+        </div>
+        <div class="list"></div>
+        <div class="class-list">
+            <div class="student instructor">
+                <img src="img/icon-player.png" alt="User Icon">
+                <span>Instrutor 1</span> <span style="margin-left:auto;">Instrutor</span>
+            </div>
+        </div>
+        <ul class="form-list hidden">
+            <li><input type="text" placeholder="Digite seu nome"></li>
+            <li><input type="text" placeholder="Digite seu sobrenome"></li>
+            <li><button>Adicionar Aluno</button></li>
+        </ul>
     </div>
     <script src="turma.js"></script>
+    <script>
+        document.getElementById('editButton').addEventListener('click', function() {
+            window.location.href = './gerenciamento.html'; 
+        });
+    </script>
 </body>
 </html>
