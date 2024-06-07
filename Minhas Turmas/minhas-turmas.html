@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Minhas Turmas</title>
+    <link rel="stylesheet" href="minhaTurma.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="menu">
+                    <img src="menu.png" alt="Menu" class="img-menu">
+                </div>
+                <h1 class="logo">
+                    <span class="logo-content">PUC FIT</span>
+                    <img src="Vector (1).png" alt="Ícone" class="icon">
+                </h1>
+                <div class="sino-relogio">
+                    <button class="nav-button relogio" type="button">
+                        <img src="Relogio.png" alt="Relógio">
+                    </button>
+                    <button class="nav-button notification" type="button">
+                        <img src="Sino Branco.png" alt="Notificação">
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div class="turmas-header">
+            <button class="turmas-button" id="minhas-turmas">Minhas Turmas</button>
+            <button class="turmas-button" id="turmas">Turmas</button>
+        </div>
+
+        <div class="select-container">
+            <span class="label-text">Dia:</span>
+            <select id="dia" name="dia">
+                <option value="Nulo"></option>
+                <option value="segunda">Segunda-feira</option>
+                <option value="terca">Terça-feira</option>
+                <option value="quarta">Quarta-feira</option>
+                <option value="quinta">Quinta-feira</option>
+                <option value="sexta">Sexta-feira</option>
+                <option value="sabado">Sábado</option>
+                <option value="domingo">Domingo</option>
+            </select>
+            <button class="rotina-button" type="button">
+                <img src="mais.png" alt="Botão 2">
+            </button>
+        </div>
+
+        <section class="turmas">
+            <div class="turma">
+                <h3>Turma 01</h3>
+                <p>Dia: Segunda-Feira</p>
+                <p>Horário: 08:00am - 09:00am</p>
+                <p>Vagas: 25/00</p>
+            </div>
+
+            <div class="turma">
+                <h3>Turma 01</h3>
+                <p>Dia: Quarta-Feira</p>
+                <p>Horário: 08:00am - 09:00am</p>
+                <p>Vagas: 25/00</p>
+            </div>
+        </section>
+    </main>
+    <script src="minhasTurmas.js"></script>
+</body>
+
+</html>
