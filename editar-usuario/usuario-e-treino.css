@@ -34,14 +34,21 @@
 
 h2 {
     font-family: 'Manrope';
+    font-style: normal;
     font-weight: 800;
     font-size: 24px;
+    line-height: 100%;
+    font-feature-settings: 'liga' off;
     color: #2c363f;
-    border-bottom: #2C363F solid;
+    border: none;
+    border-bottom: 4px solid #2C363F;
     width: 328px;
     margin-bottom: 10px;
+    padding-bottom: 10px;
     text-align: left;
     margin: 0 auto;
+    border-radius: 2px;
+    width: 328px;
 }
 
 form {
@@ -55,17 +62,22 @@ form {
     margin: 10px;
     width: 328px;
     height: 47px;
-    border-color: #A9BCD0;
-    background-color: #EFF1F3;
+    border: 2px solid #A9BCD0;
+    background: #EFF1F3;
     font-family: 'Manrope';
     font-size: 14px;
+    content: "";
 }
 
 .form-check label {
     font-family: 'Manrope';
+    font-style: normal;
     font-weight: 600;
     font-size: 16px;
-
+    line-height: 20px;
+    font-feature-settings: 'liga' off;
+    color: #11151C;
+    align-items: flex-start;
 }
 
 button {
@@ -109,8 +121,8 @@ button {
     margin-bottom: 10px;
     width: 153px;
     height: 47px;
-    border-color: #A9BCD0;
-    background-color: #EFF1F3;
+    border: 2px solid #A9BCD0;
+    background: #EFF1F3;
     font-family: 'Manrope';
     font-size: 14px;
     display: inline;
