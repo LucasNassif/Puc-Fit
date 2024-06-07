@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC FIT - Adicionar Notificação</title>
+    <link rel="stylesheet" href="/editar-usuario/usuario-e-treino.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <img src="/editar-usuario/img/menu-icon.png" alt="Menu">
+                <h1 class="logo">
+                    <span class="logo-content">PUC FIT</span>
+                    <img src="/editar-usuario/img/Vector.png" alt="PUC FIT logo-content" class="icon">
+                </h1>
+                <div class="icons">
+                    <img src="/editar-usuario/img/clock.png" alt="Clock">
+                    <img src="/editar-usuario/img/notification.png" alt="Notification">
+                </div>
+            </div>
+    </header>
+
+    <h2> Adicionar Notificação </h2>
+    <form id="formulario" action="" method="post">
+        <div>
+            <label class="campo-label" for="titulo"></label>
+            <input class="campo" type="text" id="titulo" name="titulo" placeholder="Título" required>
+        </div>
+        <div>
+            <label class="campo-label" for="destinatarios"></label>
+            <input class="campo" type="text" id="destinatarios" name="destinatarios" placeholder="Destinatários"
+                required>
+        </div>
+        <div class="container-box2">
+            <div class="checkbox-container">
+                <div class="checkbox-label">
+                    <input type="checkbox" id="programar-notificacao" name="programar-notificacao">
+                    <label for="programar-notificacao">Programar notificação</label>
+                </div>
+            </div>
+        </div>
+        <textarea class="especificacoes" cols="40" rows="10" placeholder="Assunto"></textarea><br>
+        </div>
+        <div class="button">
+            <button type="submit">Confirmar</button>
+        </div>
+    </form>
+</body>
+
+</html>

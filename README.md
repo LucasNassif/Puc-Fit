@@ -10,11 +10,11 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
+* Arthur Neves
 * Déborah Thaís de Matos
+* Luana Paula Ramos de Souza
 * Lucas de Souza Nassif Lemos 
 * Sibelle Mendes Diniz
-* Arthur Neves
-* Nome completo do aluno 5
 
 ## Orientador
 
