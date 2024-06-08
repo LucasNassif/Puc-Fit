@@ -24,17 +24,17 @@
         </div>
         <div class="class-info">
             <div>
-                <h3>Turma 01</h3>
+                <h3 id="nomeTurmaDisplay">Turma 01</h3>
             </div>
             <div>
-                <h3 class="numero">0/20</h3>
+                <h3 class="numero" id="numeroVagasDisplay">0/20</h3>
             </div>
         </div>
         <div class="edit-icons">
-            <p class="day-hour">Segunda-Feira<br>08:00am - 09:00am</p>
+            <p class="day-hour" id="dayHourDisplay">Segunda-Feira<br>08:00am - 09:00am</p>
             <div class="image-edit-add">
                 <img src="img/edit.png" alt="Edit" id="editButton">
-                <img src="img/add.png" alt="Settings">
+                <img src="img/add.png" alt="Add" id="addButton">
             </div>
         </div>
         <div class="list"></div>
@@ -53,8 +53,29 @@
     <script src="turma.js"></script>
     <script>
         document.getElementById('editButton').addEventListener('click', function() {
-            window.location.href = './gerenciamento.html'; 
+            window.location.href = '/editar-turma/imagem/editarturma.html'; 
         });
+        document.getElementById('addButton').addEventListener('click', function() {
+            window.location.href = '/add-usuario-turma/addusuarioturma.html'; 
+        });
+
+        window.onload = function() {
+            var nomeTurma = localStorage.getItem('nomeTurma');
+            var diaSemana = localStorage.getItem('diaSemana');
+            var horarioInicial = localStorage.getItem('horarioInicial');
+            var horarioFinal = localStorage.getItem('horarioFinal');
+            var numeroVagas = localStorage.getItem('numeroVagas');
+
+            if (nomeTurma) {
+                document.getElementById('nomeTurmaDisplay').textContent = nomeTurma;
+            }
+            if (diaSemana && horarioInicial && horarioFinal) {
+                document.getElementById('dayHourDisplay').innerHTML = diaSemana + '<br>' + horarioInicial + ' - ' + horarioFinal;
+            }
+            if (numeroVagas) {
+                document.getElementById('numeroVagasDisplay').textContent = '0/' + numeroVagas;
+            }
+        };
     </script>
 </body>
 </html>

@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const studentList = document.querySelector('.class-list'); // Seleciona o elemento ".class-list"
 
     addButton.addEventListener('click', () => {
+        // Redirecionar para a nova página
+        window.location.href = '/add-usuario-turma/addusuarioturma.html';
 
         // Cria os elementos para o formulário
         const formContainer = document.createElement('div');

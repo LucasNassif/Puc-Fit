@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC FIT - Editar Turma</title>
+    <link rel="stylesheet" href="editarturma.css">
+</head>
+<body>
+    <div class="container">
+        <div class="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <img src="/tela-aula/img/Right Side.png" alt="WiFi and Battery">
+            </div>
+        </div>
+        <div class="header">
+            <img src="/tela-aula/img/menu-icon.png" alt="Menu">
+            <img src="/tela-aula/img/Vector-logo.png" alt="PUC FIT Logo">
+            <div class="icons">
+                <img src="/tela-aula/img/clock-icon.png" alt="Clock">
+                <img src="/tela-aula/img/notification.png" alt="Notification">
+            </div>
+        </div>
+        <div class="edit-turma">
+            <h2>Editar Turma</h2>
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(event, 'dados')">Dados</button>
+                <button class="tab-button" onclick="openTab(event, 'participantes')">Participantes</button>
+            </div>
+            <div id="dados" class="tab-content">
+                <form id="editForm">
+                    <input type="text" id="nomeTurma" placeholder="Nome da turma">
+                    <select id="diaSemana">
+                        <option value="">Dia</option>
+                        <option value="segunda">Segunda-Feira</option>
+                        <option value="terca">Terça-Feira</option>
+                        <option value="quarta">Quarta-Feira</option>
+                        <option value="quinta">Quinta-Feira</option>
+                        <option value="sexta">Sexta-Feira</option>
+                        <option value="sabado">Sábado</option>
+                        <option value="domingo">Domingo</option>
+                    </select>
+                    <input type="time" id="horarioInicial" placeholder="Horário Inicial">
+                    <input type="time" id="horarioFinal" placeholder="Horário Final">
+                    <input type="number" id="numeroVagas" placeholder="Número de Vagas">
+                    <button type="button" onclick="updateTurma()">Confirmar</button>
+                </form>
+            </div>
+            <div id="participantes" class="tab-content" style="display:none;">
+            </div>
+        </div>
+    </div>
+    <script src="editarturma.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC FIT - Adicionar Usuário</title>
+    <link rel="stylesheet" href="addusuarioturma.css">
+</head>
+<body>
+    <div class="container">
+        <div class="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <img src="/tela-aula/img/Right Side.png" alt="WiFi and Battery">
+            </div>
+        </div>
+        <div class="header">
+            <img src="/tela-aula/img/menu-icon.png" alt="Menu">
+            <img src="/tela-aula/img/Vector-logo.png" alt="PUC FIT Logo">
+            <div class="icons">
+                <img src="/tela-aula/img/clock-icon.png" alt="Clock">
+                <img src="/tela-aula/img/notification.png" alt="Notification">
+            </div>
+        </div>
+        <div class="add-usuario">
+            <h2>Adicionar Usuário</h2>
+            <form id="addUserForm">
+                <input type="text" id="nome" placeholder="Nome *" required>
+                <input type="text" id="cpf" placeholder="CPF *" required>
+                <input type="date" id="dataNascimento" placeholder="Data Nascimento *" required>
+                <input type="email" id="email" placeholder="Email *" required>
+                <input type="tel" id="telefone" placeholder="Telefone *" required>
+                <input type="text" id="endereco" placeholder="Endereço *" required>
+                <label>
+                    <input type="checkbox" id="adminPrivilegios"> Fornecer privilégios de Administrador
+                </label>
+                <button type="submit" id="confirm-button">Confirmar</button>
+            </form>
+        </div>
+    </div>
+    <script src="adicionarusuario.js"></script>
+    <script>
+            document.getElementById('confirm-button').addEventListener('click', function() {
+            window.location.href = '/tela-aula/turma.html'; 
+        });
+    </script>
+</body>
+</html>
