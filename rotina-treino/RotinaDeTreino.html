@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>PUC FIT</title>
+    <title>Rotina de Treino</title>
     <link rel="stylesheet" href="RDTstyle.css">
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -14,7 +14,14 @@
         <nav class="navbar">
             <div class="navbar-container">
                 <div class="menu">
-                    <img src="menu.png" alt="menu" class="img-menu">
+                    <img src="menu.png" alt="menu" class="img-menu" onclick="toggleMenu()">
+                    <div class="dropdown-menu" id="menuDropdown">
+                        <a href="#" class="menu-item meu-painel">Meu Painel</a>
+                        <a href="#" class="menu-item turmas">Turmas</a>
+                        <a href="#" class="menu-item anotacoes">Anotações</a>
+                        <a href="#" class="menu-item gerenciamento">Gerenciamento</a>
+                        <a href="#" class="menu-item sair">Sair</a>
+                    </div>
                 </div>
                 <h1 class="logo">
                     <div class="logo-content">

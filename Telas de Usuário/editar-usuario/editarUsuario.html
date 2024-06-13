@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC FIT - Novo Usuário</title>
+    <link rel="stylesheet" href= "editarUsuario.css">
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="menu">
+                    <img src="/Imagens/menu.png" alt="Menu" class="img-menu">
+                </div>
+                <h1 class="logo">
+                    <span class="logo-content">PUC FIT</span>
+                    <img src="/Imagens/Vector (1).png" alt="Ícone" class="icon">
+                </h1>
+                <div class="sino-relogio">
+                    <button class="nav-button relogio" type="button">
+                        <img src="/Imagens/Relogio.png" alt="Relógio">
+                    </button>
+                    <button class="nav-button notification" type="button">
+                        <img src="/Imagens/Sino Branco.png" alt="Notificação">
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="formulario-cadastro-usuario">
+        <h1>Editar Usuário</h1>
+        <form class="form" id="cadastroForm" action="#" method="post">
+            <div class="form_grupo">
+                <label class="form_label" for="nome"></label>
+                <input class="form_input" type="text" id="nome" name="nome" placeholder="Digite seu nome">
+            </div>
+            <div class="form_grupo">
+                <label class="form_label" for="cpf"></label>
+                <input class="form_input" type="text" id="cpf" name="cpf" placeholder="Digite seu CPF">
+            </div>
+            <div class="form_grupo">
+                <label for="datanascimento" class="form_label"></label>
+                <input type="date" name="datanascimento" class="form_input" id="datanascimento" required>
+            </div>
+            <div class="form_grupo">
+                <label for="telefone" class="form_label"></label>
+                <input type="tel" name="telefone" class="form_input" id="telefone" placeholder="Digite seu telefone" required>
+            </div>
+            <div class="form_grupo">
+                <label for="endereco" class="form_label"></label>
+                <input type="text" name="endereco" class="form_input" id="endereco" placeholder="Digite seu endereço" required>
+            </div>
+            <div class="form_grupo">
+                <label class="form_label" for="email"></label>
+                <input class="form_input" type="email" id="email" name="email" placeholder="Digite seu email">
+            </div>
+            <div class="form_grupo">
+                <label class="form_label" for="senha"></label>
+                <input class="form_input" type="password" id="senha" name="senha" placeholder="Crie sua senha" required>
+            </div>
+            <div class="form_grupo1">
+                <div class="form-check">
+                    <input class="exercise-checkbox" type="checkbox" id="admin_privileges">
+                    <label for="admin_privileges">Fornecer privilégios de Administrador</label>
+                </div>
+            </div>
+            <div class="submit">
+                <button class="submit_btn" type="submit">Confirmar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -5,7 +5,7 @@ function salvarDadosCadastro() {
     const email = document.getElementById('email').value;
     const telefone = document.getElementById('telefone').value;
     const endereco = document.getElementById('endereco').value;
-    const senha = document.getElementById('senha').value; // Get the password value
+    const senha = document.getElementById('senha').value; 
     const adminPrivileges = document.getElementById('admin_privileges').checked;
 
     const novoUsuario = {
@@ -15,27 +15,27 @@ function salvarDadosCadastro() {
         email: email,
         telefone: telefone,
         endereco: endereco,
-        senha: senha, // Add the password to the user object
+        senha: senha, 
         adminPrivileges: adminPrivileges
     };
 
-    // Verifica se já existem usuários salvos no localStorage
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-    // Adiciona o novo usuário à lista de usuários
     usuarios.push(novoUsuario);
-
-    // Salva a lista atualizada de usuários no localStorage
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-    console.log('Usuário cadastrado:', novoUsuario); // Log the new user
-    console.log('Todos os usuários:', usuarios); // Log all users
+    console.log('Usuário cadastrado:', novoUsuario); 
+    console.log('Todos os usuários:', usuarios); 
 
     alert('Usuário cadastrado com sucesso!');
+    
+    // Logar automaticamente o usuário
+    localStorage.setItem('usuarioLogado', JSON.stringify(novoUsuario));
+
+    // Redirecionar para a página principal
+    window.location.href = '../../rotina-treino/RotinaDeTreino.html';
 }
 
-// Event listener para o envio do formulário de cadastro
 document.getElementById('cadastroForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-    salvarDadosCadastro(); // Chama a função para salvar os dados de cadastro
+    event.preventDefault(); 
+    salvarDadosCadastro(); 
 });

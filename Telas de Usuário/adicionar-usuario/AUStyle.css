@@ -1,22 +1,21 @@
-html {
-    height: 100%;
-}
-
 body {
     font-family: 'Manrope', sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
     box-sizing: border-box;
     height: 100%;
     min-height: 100vh;
-    display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+    font-style: normal;
 }
 
-.container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 main {
@@ -103,51 +102,51 @@ main {
     margin-right: 10px;
 }
 
+* {
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
 .formulario-cadastro-usuario {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto 20px auto;
+    width: calc(100% - 40px);
+    /* Deixa 20px de espaço de cada lado */
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     background: #ffffff;
     border-radius: 3px;
     padding: 1em;
-    position: relative; /* Adiciona posição relativa para alinhar a linha */
+    flex: 1; /* Ajuste feito aqui */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Para alinhar a linha */
 }
 
 .formulario-cadastro-usuario h1 {
-    font-family: 'Manrope';
-    font-style: normal;
     font-weight: 800;
     font-size: 24px;
-    line-height: 100%;
+    font-style: normal;
+    line-height: 33px;
     font-feature-settings: 'liga' off;
     color: #322c3f;
-    border: none;
-    margin: 0 auto; /* Ajusta a margem para posicionar acima do formulário */
-    border-radius: 2px;
+    margin: 0 auto;
     border-bottom: 4px solid #2C363F;
     margin-bottom: 10px;
     padding-bottom: 10px;
     text-align: left;
-    width: 328px; /* Define a largura do título */
+    width: 100%;
+    max-width: 328px;
+    /* Define a largura máxima do título */
 }
 
 .formulario-cadastro-usuario form {
-    margin-top: 20px; /* Adiciona margem entre o título e o formulário */
+    margin-top: 20px;
 }
-
-.formulario-cadastro-usuario hr {
-    margin: 0 auto 20px auto; /* Ajusta a margem da linha */
-    width: 80%; /* Define a largura da linha */
-    border: none;
-    border-bottom: 2px solid #2C363F; /* Cor e espessura da linha */
-}
-
 
 .form_grupo {
     position: relative;
-    width: 100%;
+    width: calc(100% - 40px);
+    /* Deixa 20px de espaço de cada lado */
     max-width: 328px;
     margin: 0 auto 20px auto;
 }
@@ -167,26 +166,16 @@ main {
 .form_label {
     position: absolute;
     width: calc(100% - 20px);
-    max-width: 308px;
     height: 47px;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
     text-align: left;
-    font-family: 'Manrope';
-    font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 47px;
     color: #11151C;
-    font-feature-settings: 'liga' off;
-}
-
-.form_grupo label {
-    margin-left: 10px;
-    margin-top: 5px;
-    color: rgba(17, 21, 28, 0.76);
 }
 
 .form_input {
@@ -199,7 +188,7 @@ main {
     line-height: 20px;
     position: relative;
     z-index: 1;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
 }
 
 .exercise-checkbox {
@@ -217,12 +206,9 @@ main {
 }
 
 .form-check label {
-    font-family: 'Manrope';
-    font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    font-feature-settings: 'liga' off;
     color: #11151C;
     align-items: flex-start;
 }
@@ -232,27 +218,35 @@ main {
     align-items: flex-start;
 }
 
+.formulario-cadastro-usuario hr {
+    margin: 0 auto 20px auto;
+    /* Ajusta a margem da linha */
+    width: 80%;
+    /* Define a largura da linha */
+    border: none;
+    border-bottom: 2px solid #2C363F;
+    /* Cor e espessura da linha */
+}
+
+.form_grupo label {
+    margin-left: 10px;
+    margin-top: 5px;
+    color: rgba(17, 21, 28, 0.76);
+}
+
 .form_grupo1 {
     position: relative;
-    width: 100%;
+    width: calc(100% - 40px);
+    /* Deixa 20px de espaço de cada lado */
     max-width: 328px;
     margin: 0 auto 20px auto;
     text-align: center;
     align-items: flex-start;
 }
 
-.form_grupo1::before {
-    content: "";
-    box-sizing: content-box;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-}
-
 .submit {
-    width: 100%;
+    width: calc(100% - 40px);
+    /* Deixa 20px de espaço de cada lado */
     max-width: 328px;
     text-align: center;
     margin: 0 auto 20px auto;
@@ -267,12 +261,9 @@ main {
     outline: none;
     background-color: #0CA789;
     color: #EFF1F3;
-    font-family: 'Manrope';
-    font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 100%;
-    letter-spacing: -0.006em;
     border-radius: 10px;
     margin: 20px auto;
     cursor: pointer;
@@ -286,32 +277,8 @@ main {
 }
 
 .form_input::placeholder {
-    color: rgba(17, 21, 28, 0.5); /* cor do texto do placeholder */
-    font-family: 'Manrope';
-    font-style: italic; /* estilo do texto do placeholder */
-}
-
-/* Reset CSS */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    box-sizing: border-box; /* Melhora o controle do tamanho dos elementos */
+    color: rgba(17, 21, 28, 0.5);
+    font-style: italic;
 }
 
 /* Responsividade */
@@ -333,15 +300,13 @@ time, mark, audio, video {
         padding: 0.5em;
     }
 
-    .form_grupo {
-        width: 100%;
+    .form_grupo,
+    .form_grupo1,
+    .submit {
+        width: calc(100% - 20px);
     }
 
     .submit_btn {
-        width: 100%;
-    }
-
-    .form-check {
         width: 100%;
     }
 }
