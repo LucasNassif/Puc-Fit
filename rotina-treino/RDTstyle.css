@@ -113,25 +113,24 @@ main {
 }
 
 .meu-painel {
-    background-image: url('MeuPainel.png');
+    background-image: url('/Imagens/MeuPainel.png');
 }
 
 .turmas {
-    background-image: url('Turmas.png');
+    background-image: url('/Imagens/Turmas.png');
 }
 
 .anotacoes {
-    background-image: url('Anotações.png');
+    background-image: url('/Imagens/Anotações.png');
 }
 
 .gerenciamento {
-    background-image: url('Gerenciamento.png');
+    background-image: url('/Imagens/Gerenciamento.png');
 }
 
 .sair {
-    background-image: url('sair.png');
+    background-image: url('/Imagens/sair.png');
 }
-
 
 .sino-relogio {
     width: 20%;

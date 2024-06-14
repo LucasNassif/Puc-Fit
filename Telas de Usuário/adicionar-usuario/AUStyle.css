@@ -85,11 +85,55 @@ main {
 .menu {
     width: 20%;
     margin-right: auto;
+    position: relative;
+    display: inline-block;
 }
 
 .menu img {
     width: 30px;
     height: 30px;
+}
+
+.menu-item {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+    background-color: #EFF1F3; /* Cor dos botões */
+    border-radius: 8px;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    padding-left: 50px; /* Ajusta o espaço para a imagem */
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.meu-painel {
+    background-image: url('/Imagens/MeuPainel.png');
+}
+
+.turmas {
+    background-image: url('/Imagens/Turmas.png');
+}
+
+.anotacoes {
+    background-image: url('/Imagens/Anotações.png');
+}
+
+.gerenciamento {
+    background-image: url('/Imagens/Gerenciamento.png');
+}
+
+.sair {
+    background-image: url('/Imagens/sair.png');
 }
 
 .sino-relogio {

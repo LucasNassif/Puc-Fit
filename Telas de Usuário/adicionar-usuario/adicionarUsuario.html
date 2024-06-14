@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,15 @@
         <nav class="navbar">
             <div class="navbar-container">
                 <div class="menu">
-                    <img src="/Imagens/menu.png" alt="Menu" class="img-menu">
+                    <img src="/Imagens/menu.png" alt="menu" class="img-menu" onclick="toggleMenu()">
+                    <div class="dropdown-menu" id="menuDropdown">
+                        <a href="#" class="menu-item meu-painel" onclick="redirectToPage('meu-painel')">Meu Painel</a>
+                        <a href="#" class="menu-item turmas" onclick="redirectToPage('turmas')">Turmas</a>
+                        <a href="#" class="menu-item anotacoes" onclick="redirectToPage('anotacoes')">Anotações</a>
+                        <a href="#" class="menu-item gerenciamento"
+                            onclick="redirectToPage('gerenciamento')">Gerenciamento</a>
+                        <a href="#" class="menu-item sair" onclick="redirectToPage('sair')">Sair</a>
+                    </div>
                 </div>
                 <h1 class="logo">
                     <span class="logo-content">PUC FIT</span>
@@ -50,11 +58,13 @@
             </div>
             <div class="form_grupo">
                 <label for="telefone" class="form_label"></label>
-                <input type="tel" name="telefone" class="form_input" id="telefone" placeholder="Digite seu telefone" required>
+                <input type="tel" name="telefone" class="form_input" id="telefone" placeholder="Digite seu telefone"
+                    required>
             </div>
             <div class="form_grupo">
                 <label for="endereco" class="form_label"></label>
-                <input type="text" name="endereco" class="form_input" id="endereco" placeholder="Digite seu endereço" required>
+                <input type="text" name="endereco" class="form_input" id="endereco" placeholder="Digite seu endereço"
+                    required>
             </div>
             <div class="form_grupo">
                 <label class="form_label" for="email"></label>
@@ -78,4 +88,5 @@
 
     <script src="adicionarUsuario.js" defer></script>
 </body>
+
 </html>

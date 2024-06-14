@@ -56,3 +56,29 @@ window.onclick = function(event) {
         }
     }
 };
+
+// Função para alternar a visibilidade do menu ao clicar no ícone de menu
+function toggleMenu() {
+    const menuDropdown = document.getElementById('menuDropdown');
+    menuDropdown.classList.toggle('show');
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+
+// Evento para carregar os dados do usuário quando a página é carregada
+document.addEventListener('DOMContentLoaded', function() {
+    // Simulando o login automático ao carregar a página
+    simularLogin();
+});
+
+// Evento para lidar com o fechamento do menu se clicar fora dele (mantido conforme o seu código original)
+window.onclick = function(event) {
+    if (!event.target.matches('.img-menu')) {
+        const dropdowns = document.getElementsByClassName("dropdown-menu");
+        for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+};
+

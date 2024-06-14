@@ -29,15 +29,10 @@ main {
 
 .main-content {
     display: flex;
-    /* Adiciona display flex para alinhar verticalmente o select */
     flex-direction: column;
-    /* Alinha os elementos verticalmente */
     align-items: flex-start;
-    /* Alinha o select à esquerda com os botões */
     margin-top: 20px;
-    /* Adiciona uma margem superior para separar da div acima */
     padding: 20px;
-    /* Adiciona preenchimento interno */
 }
 
 .navbar {
@@ -226,7 +221,7 @@ h3 {
     border: none;
     background: none;
     cursor: pointer;
-    margin-left: 10px; /* Adiciona margem à esquerda para separar o botão do select */
+    margin-left: 10px;
 }
 
 .rotina-button img {

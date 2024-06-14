@@ -15,7 +15,15 @@
         <nav class="navbar">
             <div class="navbar-container">
                 <div class="menu">
-                    <img src="/Imagens/menu.png" alt="Menu" class="img-menu">
+                    <img src="/Imagens/menu.png" alt="menu" class="img-menu" onclick="toggleMenu()">
+                    <div class="dropdown-menu" id="menuDropdown">
+                        <a href="#" class="menu-item meu-painel" onclick="redirectToPage('meu-painel')">Meu Painel</a>
+                        <a href="#" class="menu-item turmas" onclick="redirectToPage('turmas')">Turmas</a>
+                        <a href="#" class="menu-item anotacoes" onclick="redirectToPage('anotacoes')">Anotações</a>
+                        <a href="#" class="menu-item gerenciamento"
+                            onclick="redirectToPage('gerenciamento')">Gerenciamento</a>
+                        <a href="#" class="menu-item sair" onclick="redirectToPage('sair')">Sair</a>
+                    </div>
                 </div>
                 <h1 class="logo">
                     <span class="logo-content">PUC FIT</span>
@@ -75,5 +83,6 @@
             </div>
         </form>
     </div>
+    <script src="editarUsuario.js" defer></script>
 </body>
 </html>
