@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+main {
+    margin: 0px 1em;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+.nomeTreino {
+    display: flex;
+}
+
+input[type=checkbox] {
+    transform: scale(2);
+    margin-right: 1.5em;
+}
+
+h1 {
+    margin: 0px;
+}
+
+button {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    background-color: #F97316;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    justify-content: center;
+}
+
+i {
+    font-size: 20px;
+}
+
+button:active {
+    background-color: #e0650d;
+}
+
+.dados {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.contagem {
+    display: grid;
+    padding-right: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    border-right: 4px solid hsla(0, 0%, 0%, 0.4);
+}
+
+.especificacoes{
+    margin-top: 4px;
+    padding-top: 5px;
+    border-top: 5px solid rgba(0, 0, 0, 0.5);
+}
