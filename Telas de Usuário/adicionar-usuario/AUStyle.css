@@ -290,7 +290,6 @@ main {
 
 .submit {
     width: calc(100% - 40px);
-    /* Deixa 20px de espaço de cada lado */
     max-width: 328px;
     text-align: center;
     margin: 0 auto 20px auto;

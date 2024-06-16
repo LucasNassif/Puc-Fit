@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações</title>
+    <link rel="stylesheet" href="anotacoes.css">
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="menu">
+                    <img src="/Imagens/menu.png" alt="menu" class="img-menu" onclick="toggleMenu()">
+                    <div class="dropdown-menu" id="menuDropdown">
+                        <a href="#" class="menu-item meu-painel" onclick="redirectToPage('meu-painel')">Meu Painel</a>
+                        <a href="#" class="menu-item turmas" onclick="redirectToPage('turmas')">Turmas</a>
+                        <a href="#" class="menu-item anotacoes" onclick="redirectToPage('anotacoes')">Anotações</a>
+                        <a href="#" class="menu-item gerenciamento"
+                            onclick="redirectToPage('gerenciamento')">Gerenciamento</a>
+                        <a href="#" class="menu-item sair" onclick="redirectToPage('sair')">Sair</a>
+                    </div>
+                </div>
+                <h1 class="logo">
+                    <span class="logo-content">PUC FIT</span>
+                    <img src="/Imagens/Vector (1).png" alt="Ícone" class="icon">
+                </h1>
+                <div class="sino-relogio">
+                    <button class="nav-button relogio" type="button">
+                        <img src="/Imagens/Relogio.png" alt="Relógio">
+                    </button>
+                    <button class="nav-button notification" type="button">
+                        <img src="/Imagens/Sino Branco.png" alt="Notificação">
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="anotacao-section">
+        <div class="container">
+            <div class="form-group">
+                <label for="notaInput">Adicione sua anotação:</label>
+                <textarea id="notaInput" class="form-control" rows="3"></textarea>
+            </div>
+            <button class="salvar-btn" onclick="addNota()">Salvar Anotação</button>
+            <div id="notaContainer" class="mt-4">
+                <!-- Anotações serão adicionadas aqui -->
+            </div>
+        </div>
+    </section>
+    <script src="anotacoes.js" defer></script>
+</body>
+
+</html>

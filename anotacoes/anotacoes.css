@@ -1,0 +1,194 @@
+/* Definições gerais */
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+    font-style: normal;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Estilização do cabeçalho e barra de navegação */
+.cabecalho {
+    background-color: #2C363F;
+    padding: 10px;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #2C363F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.nav-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 33px;
+    font-feature-settings: 'liga' off;
+    color: #0CA789;
+    white-space: nowrap;
+    width: 80%;
+}
+
+.logo img {
+    width: 40px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.logo-content {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    width: 20%;
+    margin-right: auto;
+    position: relative;
+    display: inline-block;
+}
+
+.menu img {
+    width: 30px;
+    height: 30px;
+}
+
+.menu-item {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+    background-color: #EFF1F3;
+    /* Cor dos botões */
+    border-radius: 8px;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    /* Ajusta o espaço para a imagem */
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.meu-painel {
+    background-image: url('/Imagens/MeuPainel.png');
+}
+
+.turmas {
+    background-image: url('/Imagens/Turmas.png');
+}
+
+.anotacoes {
+    background-image: url('/Imagens/Anotações.png');
+}
+
+.gerenciamento {
+    background-image: url('/Imagens/Gerenciamento.png');
+}
+
+.sair {
+    background-image: url('/Imagens/sair.png');
+}
+
+.sino-relogio {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.relogio {
+    margin-right: 10px;
+}
+
+/* Estilização da seção de anotações */
+.anotacao-section {
+    padding: 20px;
+}
+
+.nota {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.nota span {
+    display: block;
+    text-align: right;
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+.salvar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: #0CA789;
+    color: #EFF1F3;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    border-radius: 10px;
+    margin: 20px auto;
+    cursor: pointer;
+    width: 100%;
+    height: 43px;
+}
