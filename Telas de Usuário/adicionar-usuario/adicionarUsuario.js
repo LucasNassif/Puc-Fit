@@ -1,3 +1,4 @@
+// Função para salvar os dados do novo usuário
 function salvarDadosCadastro() {
     const nome = document.getElementById('nome').value;
     const cpf = document.getElementById('cpf').value;
@@ -8,6 +9,8 @@ function salvarDadosCadastro() {
     const senha = document.getElementById('senha').value; 
     const adminPrivileges = document.getElementById('admin_privileges').checked;
 
+
+    // Criar um objeto com os dados do novo usuário
     const novoUsuario = {
         nome: nome,
         cpf: cpf,
@@ -19,24 +22,32 @@ function salvarDadosCadastro() {
         adminPrivileges: adminPrivileges
     };
 
+    // Carregar os usuários existentes do localStorage ou iniciar um array vazio
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    // Adicionar o novo usuário à lista de usuários
     usuarios.push(novoUsuario);
+    // Salvar a lista atualizada no localStorage
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
+    // Exibir os dados do novo usuário no console para confirmação
     console.log('Usuário cadastrado:', novoUsuario); 
     console.log('Todos os usuários:', usuarios); 
 
+    // Exibir um alerta informando que o usuário foi cadastrado com sucesso
     alert('Usuário cadastrado com sucesso!');
     
     // Logar automaticamente o usuário
     localStorage.setItem('usuarioLogado', JSON.stringify(novoUsuario));
 
-    // Redirecionar para a página principal
+    // Redirecionar para a página principal após o cadastro
     window.location.href = '../../rotina-treino/RotinaDeTreino.html';
 }
 
+// Adicionar um listener para o evento de submit do formulário de cadastro
 document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+    // Prevenir o comportamento padrão de submit do formulário
     event.preventDefault(); 
+    // Chamar a função para salvar os dados de cadastro
     salvarDadosCadastro(); 
 });
 
@@ -49,17 +60,23 @@ function toggleMenu() {
 // Função para redirecionar para a página correspondente ao item do menu clicado
 function redirectToPage(pageName) {
     if (pageName === 'meu-painel') {
-        window.location.href = '../../rotina-treino/RotinaDeTreino.html';  // Substitua com o caminho da sua página Meu Painel
+        window.location.href = '../../rotina-treino/RotinaDeTreino.html';
     } else if (pageName === 'turmas') {
-        window.location.href = '../../Minhas Turmas/minhas-turmas.html';  // Substitua com o caminho da sua página Turmas
+        window.location.href = '../../Minhas Turmas/minhas-turmas.html';
     } else if (pageName === 'anotacoes') {
-        window.location.href = '../../anotacoes/anotacoes.html';  // Substitua com o caminho da sua página Anotações
+        window.location.href = '/anotacoes.html';
     } else if (pageName === 'gerenciamento') {
-        window.location.href = '/gerenciamento.html';  // Substitua com o caminho da sua página Gerenciamento
+        window.location.href = '/gerenciamento.html';
     } else if (pageName === 'sair') {
-        // Implemente lógica de sair da sessão, se necessário
-        console.log('Implemente lógica para sair');
+        logout();
     }
+}
+
+// Função para realizar o logout do usuário
+function logout() {
+    localStorage.removeItem('authToken');
+    window.location.href = '../tela-login/Tela-de-login.html';
+    console.log('Usuário deslogado com sucesso');
 }
 
 // Evento para carregar os dados do usuário quando a página é carregada
@@ -68,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     simularLogin();
 });
 
-// Evento para lidar com o fechamento do menu se clicar fora dele (mantido conforme o seu código original)
+// Evento para lidar com o fechamento do menu se clicar fora dele
 window.onclick = function(event) {
     if (!event.target.matches('.img-menu')) {
         const dropdowns = document.getElementsByClassName("dropdown-menu");

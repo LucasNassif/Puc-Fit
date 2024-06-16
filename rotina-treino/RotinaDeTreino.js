@@ -17,6 +17,25 @@ function carregarDadosUsuario() {
     }
 }
 
+// Evento para carregar os dados do usuário quando a página é carregada
+document.addEventListener('DOMContentLoaded', function () {
+    carregarDadosUsuario();
+});
+
+// Evento para lidar com o fechamento do menu se clicar fora dele
+window.onclick = function (event) {
+    if (!event.target.matches('.img-menu')) {
+        const dropdowns = document.getElementsByClassName("dropdown-menu");
+        for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+};
+  
+
 // Função para realizar o login do usuário com email e senha
 function realizarLogin(email, senha) {
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
@@ -33,48 +52,45 @@ function realizarLogin(email, senha) {
     }
 }
 
-// Evento para carregar os dados do usuário quando a página é carregada
-document.addEventListener('DOMContentLoaded', function() {
-    carregarDadosUsuario();
-});
 
-// Evento para lidar com o fechamento do menu se clicar fora dele
-window.onclick = function(event) {
-    if (!event.target.matches('.img-menu')) {
-        const dropdowns = document.getElementsByClassName("dropdown-menu");
-        for (let i = 0; i < dropdowns.length; i++) {
-            const openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-};
-
-// Função para alternar a visibilidade do menu ao clicar no ícone de menu
-function toggleMenu() {
+ // Função para alternar a visibilidade do menu ao clicar no ícone de menu
+ function toggleMenu() {
     const menuDropdown = document.getElementById('menuDropdown');
     menuDropdown.classList.toggle('show');
 }
 
-// Função para alternar a visibilidade do menu ao clicar no ícone de menu
-function toggleMenu() {
-    const menuDropdown = document.getElementById('menuDropdown');
-    menuDropdown.classList.toggle('show');
-}   
-
-// Função para redirecionar para a página correspondente ao item do menu clicado
-function redirectToPage(pageName) {
+   // Função para redirecionar para a página correspondente ao item do menu clicado
+   function redirectToPage(pageName) {
     if (pageName === 'meu-painel') {
-        window.location.href = '../../rotina-treino/RotinaDeTreino.html';  // Substitua com o caminho da sua página Meu Painel
+        window.location.href = 'RotinaDeTreino.html';
     } else if (pageName === 'turmas') {
-        window.location.href = '../Minhas Turmas/minhas-turmas.html';  // Substitua com o caminho da sua página Turmas
+        window.location.href = '../Minhas Turmas/minhas-turmas.html';
     } else if (pageName === 'anotacoes') {
-        window.location.href = '../anotacoes/anotacoes.html';  // Substitua com o caminho da sua página Anotações
+        window.location.href = '../anotacoes/anotacoes.html';
     } else if (pageName === 'gerenciamento') {
-        window.location.href = '/gerenciamento.html';  // Substitua com o caminho da sua página Gerenciamento
+        window.location.href = '/gerenciamento.html';
     } else if (pageName === 'sair') {
-        // Implemente lógica de sair da sessão, se necessário
-        console.log('Implemente lógica para sair');
+        logout();
     }
 }
+
+// Função para realizar o logout do usuário
+function logout() {
+    // Limpa o token de autenticação do localStorage
+    localStorage.removeItem('authToken');
+
+    // Redireciona para a página de login
+    window.location.href = '../tela-login/Tela-de-login.html';
+
+    // Se você estiver usando cookies para armazenar tokens de sessão, você pode limpar os cookies assim:
+    // document.cookie = "authToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+    // Adicione qualquer outra lógica de limpeza necessária
+    console.log('Usuário deslogado com sucesso');
+}
+
+
+// Evento de clique para o botão de edição
+document.getElementById('edit-button').addEventListener('click', function (event) {
+    window.location.href = '../Telas de Usuário/editar-usuario/editarUsuario.html';
+});
