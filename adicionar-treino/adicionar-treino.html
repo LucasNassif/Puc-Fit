@@ -1,75 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PUC FIT - Adicionar Treino</title>
-    <link rel="stylesheet" href="/adicionar-treino/treino-e-notificacao.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <title>Adicionar Treino</title>
+    <link rel="stylesheet" href="treino-e-notificacao.css">
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="header">
-                <img src="/adicionar-treino/img/menu-icon.png" alt="Menu">
+    <header class="cabecalho">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="menu">
+                    <img src="/Imagens/menu.png" alt="menu" class="img-menu" onclick="toggleMenu()">
+                    <div class="dropdown-menu" id="menuDropdown">
+                        <a href="#" class="menu-item meu-painel" onclick="redirectToPage('meu-painel')">Meu Painel</a>
+                        <a href="#" class="menu-item turmas" onclick="redirectToPage('turmas')">Turmas</a>
+                        <a href="#" class="menu-item anotacoes" onclick="redirectToPage('anotacoes')">Anotações</a>
+                        <a href="#" class="menu-item gerenciamento"
+                            onclick="redirectToPage('gerenciamento')">Gerenciamento</a>
+                        <a href="#" class="menu-item sair" onclick="redirectToPage('sair')">Sair</a>
+                    </div>
+                </div>
                 <h1 class="logo">
                     <span class="logo-content">PUC FIT</span>
-                    <img src="/adicionar-treino/img/Vector.png" alt="PUC FIT logo-content" class="icon">
+                    <img src="/Imagens/Vector (1).png" alt="Ícone" class="icon">
                 </h1>
-                <div class="icons">
-                    <img src="/adicionar-treino/img/clock.png" alt="Clock">
-                    <img src="/adicionar-treino/img/notification.png" alt="Notification">
+                <div class="sino-relogio">
+                    <button class="nav-button relogio" type="button">
+                        <img src="/Imagens/Relogio.png" alt="Relógio">
+                    </button>
+                    <button class="nav-button notification" type="button">
+                        <img src="/Imagens/Sino Branco.png" alt="Notificação">
+                    </button>
                 </div>
             </div>
+        </nav>
     </header>
 
-
-    <h2> Adicionar Treino </h2>
-    <form id="formulario" action="" method="post">
-        <div>
-            <label class="campo-label" for="nome-do-treino"></label>
-            <input class="campo" type="text" id="nome-do-treino" name="nome-do-treino" placeholder="Nome do Treino"
-                required>
-        </div>
-        <div>
-            <label class="campo-label" for="dia"></label>
-            <input class="campo" type="text" id="dia" name="nome-do-treino" placeholder="Dia" required>
-        </div>
-        <div class="container-box">
-            <div class="checkbox-container">
-                <div class="checkbox-label">
-                    <input type="checkbox" id="repeticoes" name="repeticoes">
-                    <label for="repeticoes">Repetições</label>
-                </div>
+    <div class="formulario-cadastro-usuario">
+        <h1>Adicionar Treino</h1>
+        <form id="formulario" action="#" method="post">
+            <div class="form_grupo">
+                <label class="form_label" for="nome-do-treino"></label>
+                <input class="form_input" type="text" id="nome-do-treino" name="nome-do-treino"
+                    placeholder="Nome do treino" required>
             </div>
-            <div class="checkbox-container">
-                <div class="checkbox-label">
-                    <input type="checkbox" id="tempo" name="tempo">
-                    <label for="tempo">Tempo</label>
-                </div>
+            <div class="form_grupo">
+                <label class="form_label" for="dia-semana"></label>
+                <select class="form_input" id="dia-semana" name="dia-semana" required>
+                    <option value="">Selecione o dia</option>
+                    <option value="segunda">Segunda-Feira</option>
+                    <option value="terca">Terça-Feira</option>
+                    <option value="quarta">Quarta-Feira</option>
+                    <option value="quinta">Quinta-Feira</option>
+                    <option value="sexta">Sexta-Feira</option>
+                    <option value="sabado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+                </select>
             </div>
-        </div>
-        <div>
-            <label class="campo-menor" for="repeticoes"></label>
-            <input class="campo-pequeno" type="text" id="repeticoes" name="repeticoes" placeholder="Repetições"
-                required>
-
-            <label class="campo-menor" for="series"></label>
-            <input class="campo-pequeno" type="text" id="series" name="series" placeholder="Séries">
-        </div>
-        <div>
-            <label class="campo-label" for="tempo-descanso"></label>
-            <input class="campo" type="text" id="tempo-descanso" name="tempo-descanso" placeholder="Tempo de Descanso">
-        </div>
-        <textarea class="especificacoes" cols="40" rows="8" placeholder="Especificações"></textarea><br>
-        <div class="button">
-            <button type="submit">Confirmar</button>
-        </div>
-    </form>
+            <div class="form_grupo">
+                <label class="form_label" for="repeticoes"></label>
+                <input class="form_input" type="text" id="repeticoes" name="repeticoes" placeholder="Repetições" required>
+            </div>
+            <div class="form_grupo">
+                <label class="form_label" for="series"></label>
+                <input class="form_input" type="text" id="series" name="series" placeholder="Séries">
+            </div>
+            <div class="form_grupo">
+                <label class="form_label" for="tempo-descanso"></label>
+                <input class="form_input" type="text" id="tempo-descanso" name="tempo-descanso"
+                    placeholder="Tempo de descanso">
+            </div>
+            <div class="form_grupo">
+                <label class="form_label" for="tempo-de-treino"></label>
+                <input class="form_input" type="text" id="tempo-de-treino" name="tempo-de-treino"
+                    placeholder="Tempo de treino" required>
+            </div>
+            <div class="form_grupo">
+                <label class="form_label" for="especificacoes"></label>
+                <textarea class="form_input especificacoes" id="especificacoes" name="especificacoes"
+                    placeholder="Especificações"></textarea>
+            </div>
+            <div class="submit">
+                <button class="submit_btn" type="submit">Confirmar</button>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>

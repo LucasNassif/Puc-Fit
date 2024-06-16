@@ -52,7 +52,6 @@ function realizarLogin(email, senha) {
     }
 }
 
-
  // Função para alternar a visibilidade do menu ao clicar no ícone de menu
  function toggleMenu() {
     const menuDropdown = document.getElementById('menuDropdown');
@@ -93,4 +92,10 @@ function logout() {
 // Evento de clique para o botão de edição
 document.getElementById('edit-button').addEventListener('click', function (event) {
     window.location.href = '../Telas de Usuário/editar-usuario/editarUsuario.html';
+});
+
+// Adicionar evento de click ao botão de redirecionamento
+document.getElementById('botaoRedirecionar').addEventListener('click', function() {
+    // Redirecionar para outra página
+    window.location.href = '../adicionar-treino/adicionar-treino.html';
 });
