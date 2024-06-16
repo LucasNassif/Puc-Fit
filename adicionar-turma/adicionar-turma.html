@@ -14,7 +14,15 @@
         <nav class="navbar">
             <div class="navbar-container">
                 <div class="menu">
-                    <img src="menu.png" alt="menu" class="img-menu">
+                    <img src="/Imagens/menu.png" alt="menu" class="img-menu" onclick="toggleMenu()">
+                    <div class="dropdown-menu" id="menuDropdown">
+                        <a href="#" class="menu-item meu-painel" onclick="redirectToPage('meu-painel')">Meu Painel</a>
+                        <a href="#" class="menu-item turmas" onclick="redirectToPage('turmas')">Turmas</a>
+                        <a href="#" class="menu-item anotacoes" onclick="redirectToPage('anotacoes')">Anotações</a>
+                        <a href="#" class="menu-item gerenciamento"
+                            onclick="redirectToPage('gerenciamento')">Gerenciamento</a>
+                        <a href="#" class="menu-item sair" onclick="redirectToPage('sair')">Sair</a>
+                    </div>
                 </div>
                 <h1 class="logo">
                     <div class="logo-content">
@@ -47,7 +55,7 @@
         <label for="dia">
             <span class="label-text">Dia:</span>
         </label>
-        <select id="dia" name="dia" >
+        <select id="dia" name="dia">
             <option value="Nulo"></option>
             <option value="segunda">Segunda-feira</option>
             <option value="terca">Terça-feira</option>
@@ -65,7 +73,7 @@
                 </label>
                 <input type="time" id="horarioInicial" name="horarioInicial" required>
             </div>
-        
+
             <div class="horario-input">
                 <label for="horarioFinal">
                     <span class="label-text">Horário Final:</span>
@@ -73,15 +81,16 @@
                 <input type="time" id="horarioFinal" name="horarioFnicial" required>
             </div>
         </div>
-        
+
         <label for="numeroVagas">
             <span class="label-text"></span>
         </label>
         <input type="number" id="numeroVagas" name="numeroVagas" required placeholder="Número de Vagas ">
-        
+
 
         <button type="submit">Confirmar</button>
     </form>
+    <script src="adicionar-turma.js" defer></script>
 </body>
 
 </html>
