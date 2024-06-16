@@ -23,4 +23,4 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 # Design
 
 <li><a href="[src/README.md](https://www.figma.com/design/nvJRiuztnp9fFOJ84fEIH2/PUC-FIT?node-id=0-1)"> Figma</a></li>
-<li><a href="[src/README.md]([https://www.figma.com/design/nvJRiuztnp9fFOJ84fEIH2/PUC-FIT?node-id=0-1](https://lucasnassif.github.io/Puc-Fit/tela-login/Tela-de-login.html))"> Código hospedado</a></li>
+<li><a href="[src/README.md](https://lucasnassif.github.io/Puc-Fit/tela-login/Tela-de-login.html)"> Código hospedado</a></li>
