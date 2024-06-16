@@ -17,3 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = '../adicionar-turma/adicionar-turma.html';
     }
 });
+function redirectToAdicionarTurma() {
+    window.location.href = '../adicionar-turma/adicionar-turma.html';
+}
+
+function redirectToGerenciamento() { // Adicione esta função
+    window.location.href = 'tela-aula/gerenciamento.html';
+}
+
+    

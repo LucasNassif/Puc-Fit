@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="list"></div>
-        <div class="class-list">
+        <div class="class-list" id="studentList">
             <div class="student instructor">
                 <img src="img/icon-player.png" alt="User Icon">
                 <span>Instrutor 1</span> <span style="margin-left:auto;">Instrutor</span>
@@ -56,7 +56,7 @@
             window.location.href = '/editar-turma/imagem/editarturma.html'; 
         });
         document.getElementById('addButton').addEventListener('click', function() {
-            window.location.href = '/add-usuario-turma/addusuarioturma.html'; 
+            window.location.href = '../Telas de Usuário/adicionar-usuario/'; 
         });
 
         window.onload = function() {
@@ -75,6 +75,18 @@
             if (numeroVagas) {
                 document.getElementById('numeroVagasDisplay').textContent = '0/' + numeroVagas;
             }
+
+            const studentList = document.getElementById('studentList');
+            let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+            usuarios.forEach(usuario => {
+                const studentDiv = document.createElement('div');
+                studentDiv.classList.add('student');
+                studentDiv.innerHTML = `
+                    <img src="img/icon-player.png" alt="User Icon">
+                    <span>${usuario.nome}</span>
+                `;
+                studentList.appendChild(studentDiv);
+            });
         };
     </script>
 </body>
