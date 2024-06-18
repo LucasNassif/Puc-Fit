@@ -20,6 +20,7 @@ function carregarDadosUsuario() {
 // Evento para carregar os dados do usuário quando a página é carregada
 document.addEventListener('DOMContentLoaded', function () {
     carregarDadosUsuario();
+    carregarTreinos(); // Carregar treinos ao carregar a página
 });
 
 // Evento para lidar com o fechamento do menu se clicar fora dele
@@ -34,7 +35,6 @@ window.onclick = function (event) {
         }
     }
 };
-  
 
 // Função para realizar o login do usuário com email e senha
 function realizarLogin(email, senha) {
@@ -52,14 +52,14 @@ function realizarLogin(email, senha) {
     }
 }
 
- // Função para alternar a visibilidade do menu ao clicar no ícone de menu
- function toggleMenu() {
+// Função para alternar a visibilidade do menu ao clicar no ícone de menu
+function toggleMenu() {
     const menuDropdown = document.getElementById('menuDropdown');
     menuDropdown.classList.toggle('show');
 }
 
-   // Função para redirecionar para a página correspondente ao item do menu clicado
-   function redirectToPage(pageName) {
+// Função para redirecionar para a página correspondente ao item do menu clicado
+function redirectToPage(pageName) {
     if (pageName === 'meu-painel') {
         window.location.href = 'RotinaDeTreino.html';
     } else if (pageName === 'turmas') {
@@ -88,7 +88,6 @@ function logout() {
     console.log('Usuário deslogado com sucesso');
 }
 
-
 // Evento de clique para o botão de edição
 document.getElementById('edit-button').addEventListener('click', function (event) {
     window.location.href = '../Telas de Usuário/editar-usuario/editarUsuario.html';
@@ -98,4 +97,40 @@ document.getElementById('edit-button').addEventListener('click', function (event
 document.getElementById('botaoRedirecionar').addEventListener('click', function() {
     // Redirecionar para outra página
     window.location.href = '../adicionar-treino/adicionar-treino.html';
+});
+
+// Função para carregar treinos da localStorage
+function carregarTreinos() {
+    const treinos = JSON.parse(localStorage.getItem('treinos')) || [];
+    const exerciseGrid = document.querySelector('.exercise-grid');
+
+    if (exerciseGrid) {
+        exerciseGrid.innerHTML = ''; // Limpa o conteúdo antes de adicionar os treinos
+        treinos.forEach(treino => {
+            const div = document.createElement('div');
+            div.className = 'exercise-item';
+            div.innerHTML = `
+                <div class="exercise-details">
+                    <h5 class="exercise-name">${treino.nomeDoTreino}</h5>
+                    <div class="exercise-series">
+                        <span>Séries:</span>
+                        <span>${treino.series || 'N/A'} x ${treino.repeticoes}</span>
+                    </div>
+                    <div class="exercise-time">
+                        <span>Descanso:</span>
+                        <span>${treino.tempoDeTreino}</span>
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input class="exercise-checkbox" type="checkbox" id="exercise1">
+                </div>
+            `;
+            exerciseGrid.appendChild(div);
+        });
+    }
+}
+
+// Chame a função para carregar os treinos ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    carregarTreinos();
 });

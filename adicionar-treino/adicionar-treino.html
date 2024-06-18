@@ -42,11 +42,10 @@
 
     <div class="formulario-cadastro-usuario">
         <h1>Adicionar Treino</h1>
-        <form id="formulario" action="#" method="post">
+        <form id="adicionar-treino-form" action="#" method="post">
             <div class="form_grupo">
                 <label class="form_label" for="nome-do-treino"></label>
-                <input class="form_input" type="text" id="nome-do-treino" name="nome-do-treino"
-                    placeholder="Nome do treino" required>
+                <input class="form_input" type="text" id="nome-do-treino" name="nome-do-treino" placeholder="Nome do treino" required>
             </div>
             <div class="form_grupo">
                 <label class="form_label" for="dia-semana"></label>
@@ -71,24 +70,22 @@
             </div>
             <div class="form_grupo">
                 <label class="form_label" for="tempo-descanso"></label>
-                <input class="form_input" type="text" id="tempo-descanso" name="tempo-descanso"
-                    placeholder="Tempo de descanso">
+                <input class="form_input" type="text" id="tempo-descanso" name="tempo-descanso" placeholder="Tempo de descanso">
             </div>
             <div class="form_grupo">
                 <label class="form_label" for="tempo-de-treino"></label>
-                <input class="form_input" type="text" id="tempo-de-treino" name="tempo-de-treino"
-                    placeholder="Tempo de treino" required>
+                <input class="form_input" type="text" id="tempo-de-treino" name="tempo-de-treino" placeholder="Tempo de treino" required>
             </div>
             <div class="form_grupo">
                 <label class="form_label" for="especificacoes"></label>
-                <textarea class="form_input especificacoes" id="especificacoes" name="especificacoes"
-                    placeholder="Especificações"></textarea>
+                <textarea class="form_input especificacoes" id="especificacoes" name="especificacoes" placeholder="Especificações"></textarea>
             </div>
             <div class="submit">
-                <button class="submit_btn" type="submit">Confirmar</button>
+                <button id="submit-btn" class="submit_btn" type="submit">Confirmar</button>
             </div>
         </form>
     </div>
+    <script src="adicionar-treino.js" defer></script>
 </body>
 
 </html>
