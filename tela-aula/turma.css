@@ -182,3 +182,30 @@ button:hover {
 .hidden {
     display: none;
 }
+
+#warning {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(202, 53, 53, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.remove-button {
+    max-width: 30px!important;
+    background-color: rgba(202, 53, 53, 0.8);
+    color: white;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-button:hover {
+    background-color: rgba(202, 53, 53, 0.8);
+}

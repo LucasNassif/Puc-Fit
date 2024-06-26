@@ -51,25 +51,13 @@
                 <option value="sabado">Sábado</option>
                 <option value="domingo">Domingo</option>
             </select>
-            <button class="rotina-button" type="button">
+            <button class="rotina-button" type="button" id="addTurmaButton">
                 <img src="mais.png" alt="Botão 2">
             </button>
         </div>
 
-        <section class="turmas">
-            <div class="turma">
-                <h3>Turma 01</h3>
-                <p>Dia: Segunda-Feira</p>
-                <p>Horário: 08:00am - 09:00am</p>
-                <p>Vagas: 25/00</p>
-            </div>
-
-            <div class="turma">
-                <h3>Turma 01</h3>
-                <p>Dia: Quarta-Feira</p>
-                <p>Horário: 08:00am - 09:00am</p>
-                <p>Vagas: 25/00</p>
-            </div>
+        <section class="turmas" id="turmasSection">
+            <!-- As turmas serão carregadas aqui pelo JavaScript -->
         </section>
     </main>
     <script src="minhasTurmas.js"></script>

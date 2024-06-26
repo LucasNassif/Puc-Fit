@@ -134,3 +134,24 @@ form button {
 form button:hover {
     background-color: #098a6f;
 }
+
+.participantes-list {
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.participantes-list .student {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.participantes-list .student img {
+    height: 30px;
+    margin-right: 10px;
+}

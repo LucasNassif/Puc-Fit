@@ -41,29 +41,43 @@
     <script>
         document.getElementById('addUserForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            
-            const nome = document.getElementById('nome').value;
-            const cpf = document.getElementById('cpf').value;
-            const dataNascimento = document.getElementById('dataNascimento').value;
-            const email = document.getElementById('email').value;
-            const telefone = document.getElementById('telefone').value;
-            const endereco = document.getElementById('endereco').value;
-            const adminPrivilegios = document.getElementById('adminPrivilegios').checked;
 
+            // Captura os inputs
+            var nome = document.getElementById('nome').value;
+            var cpf = document.getElementById('cpf').value;
+            var dataNascimento = document.getElementById('dataNascimento').value;
+            var email = document.getElementById('email').value;
+            var telefone = document.getElementById('telefone').value;
+            var endereco = document.getElementById('endereco').value;
+            var adminPrivilegios = document.getElementById('adminPrivilegios').checked;
+
+            // Cria o objeto do novo usuário
             const novoUsuario = {
-                nome,
-                cpf,
-                dataNascimento,
-                email,
-                telefone,
-                endereco,
-                adminPrivilegios
+                nome: nome,
+                cpf: cpf,
+                dataNascimento: dataNascimento,
+                email: email,
+                telefone: telefone,
+                endereco: endereco,
+                adminPrivilegios: adminPrivilegios
             };
 
+            // Armazena o novo usuário no localStorage
             let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
             usuarios.push(novoUsuario);
             localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
+            // Adiciona o nome do novo usuário à lista de participantes da turma
+            let participantes = JSON.parse(localStorage.getItem('participantes')) || [];
+            participantes.push({ name: nome });
+            localStorage.setItem('participantes', JSON.stringify(participantes));
+
+            // Adiciona o nome do novo usuário à lista de participantes específicos da turma
+            let turmaParticipantes = JSON.parse(localStorage.getItem('turmaParticipantes')) || [];
+            turmaParticipantes.push({ name: nome });
+            localStorage.setItem('turmaParticipantes', JSON.stringify(turmaParticipantes));
+
+            // Redireciona para a página da turma
             window.location.href = '/tela-aula/turma.html';
         });
     </script>

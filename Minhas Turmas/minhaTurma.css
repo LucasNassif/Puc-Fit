@@ -118,6 +118,22 @@ main {
     margin-right: 10px;
 }
 
+.delete-button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+}
+
 h1 {
     margin: 0;
 }
@@ -146,7 +162,6 @@ h1 {
 .turmas-header .turmas-button:first-child {
     border-radius: 10px 0 0 10px;
 }
-
 
 .select-container {
     display: flex;
@@ -211,6 +226,7 @@ h1 {
     width: 300px;
     height: 104px;
     border-radius: 10px;
+    position: relative;
 }
 
 p {

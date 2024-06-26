@@ -44,6 +44,7 @@
                 <span>Instrutor 1</span> <span style="margin-left:auto;">Instrutor</span>
             </div>
         </div>
+        <div id="warning" class="hidden">Número de alunos atingido</div>
         <ul class="form-list hidden">
             <li><input type="text" placeholder="Digite seu nome"></li>
             <li><input type="text" placeholder="Digite seu sobrenome"></li>
@@ -56,7 +57,7 @@
             window.location.href = '/editar-turma/imagem/editarturma.html'; 
         });
         document.getElementById('addButton').addEventListener('click', function() {
-            window.location.href = '../Telas de Usuário/adicionar-usuario/'; 
+            window.location.href = '../add-usuario-turma/addusuarioturma.html'; 
         });
 
         window.onload = function() {
@@ -65,6 +66,7 @@
             var horarioInicial = localStorage.getItem('horarioInicial');
             var horarioFinal = localStorage.getItem('horarioFinal');
             var numeroVagas = localStorage.getItem('numeroVagas');
+            var participantes = JSON.parse(localStorage.getItem('turmaParticipantes')) || [];
 
             if (nomeTurma) {
                 document.getElementById('nomeTurmaDisplay').textContent = nomeTurma;
@@ -73,21 +75,47 @@
                 document.getElementById('dayHourDisplay').innerHTML = diaSemana + '<br>' + horarioInicial + ' - ' + horarioFinal;
             }
             if (numeroVagas) {
-                document.getElementById('numeroVagasDisplay').textContent = '0/' + numeroVagas;
+                document.getElementById('numeroVagasDisplay').textContent = participantes.length + '/' + numeroVagas;
             }
 
             const studentList = document.getElementById('studentList');
-            let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-            usuarios.forEach(usuario => {
+            participantes.forEach((participante, index) => {
                 const studentDiv = document.createElement('div');
                 studentDiv.classList.add('student');
                 studentDiv.innerHTML = `
                     <img src="img/icon-player.png" alt="User Icon">
-                    <span>${usuario.nome}</span>
+                    <span>${participante.name}</span>
+                    <button class="remove-button" data-index="${index}"> - </button>
                 `;
                 studentList.appendChild(studentDiv);
             });
+
+            // Atualiza a mensagem e o botão adicionar
+            updateMessage(participantes.length, numeroVagas);
+
+            // Adiciona evento de clique aos botões de remover
+            const removeButtons = document.querySelectorAll('.remove-button');
+            removeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    participantes.splice(index, 1); // Remove o aluno do array
+                    localStorage.setItem('turmaParticipantes', JSON.stringify(participantes)); // Atualiza o localStorage
+                    window.location.reload(); // Recarrega a página para atualizar a lista
+                });
+            });
         };
+
+        function updateMessage(currentCount, maxCount) {
+            const messageElement = document.getElementById('warning');
+            const addButton = document.getElementById('addButton');
+            if (currentCount >= maxCount) {
+                messageElement.classList.remove('hidden');
+                addButton.style.display = 'none';
+            } else {
+                messageElement.classList.add('hidden');
+                addButton.style.display = 'block';
+            }
+        }
     </script>
 </body>
 </html>

@@ -14,13 +14,12 @@
         <nav class="navbar">
             <div class="navbar-container">
                 <div class="menu">
-                    <img src="/Imagens/menu.png" alt="menu" class="img-menu" onclick="toggleMenu()">
+                    <img src="/Imagens/menu.png" alt="menu" class="img-menu" id="menuIcon">
                     <div class="dropdown-menu" id="menuDropdown">
                         <a href="#" class="menu-item meu-painel" onclick="redirectToPage('meu-painel')">Meu Painel</a>
                         <a href="#" class="menu-item turmas" onclick="redirectToPage('turmas')">Turmas</a>
                         <a href="#" class="menu-item anotacoes" onclick="redirectToPage('anotacoes')">Anotações</a>
-                        <a href="#" class="menu-item gerenciamento"
-                            onclick="redirectToPage('gerenciamento')">Gerenciamento</a>
+                        <a href="#" class="menu-item gerenciamento" onclick="redirectToPage('gerenciamento')">Gerenciamento</a>
                         <a href="#" class="menu-item sair" onclick="redirectToPage('sair')">Sair</a>
                     </div>
                 </div>
@@ -42,7 +41,7 @@
         </nav>
     </header>
 
-    <form action="#">
+    <form id="adicionarTurmaForm">
         <h2>Adicionar Turma</h2>
 
         <hr class="linha">
@@ -78,7 +77,7 @@
                 <label for="horarioFinal">
                     <span class="label-text">Horário Final:</span>
                 </label>
-                <input type="time" id="horarioFinal" name="horarioFnicial" required>
+                <input type="time" id="horarioFinal" name="horarioFinal" required>
             </div>
         </div>
 
@@ -87,8 +86,7 @@
         </label>
         <input type="number" id="numeroVagas" name="numeroVagas" required placeholder="Número de Vagas ">
 
-
-        <button type="submit">Confirmar</button>
+        <button type="button" onclick="salvarTurma()">Confirmar</button>
     </form>
     <script src="adicionar-turma.js" defer></script>
 </body>

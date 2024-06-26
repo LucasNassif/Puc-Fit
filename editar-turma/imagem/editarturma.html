@@ -48,9 +48,92 @@
                 </form>
             </div>
             <div id="participantes" class="tab-content" style="display:none;">
+                <h3>Participantes</h3>
+                <div id="participantesList" class="participantes-list">
+                    <!-- Lista de participantes será carregada aqui -->
+                </div>
             </div>
         </div>
     </div>
     <script src="editarturma.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+            // Se a aba "Participantes" foi aberta, carrega os participantes
+            if (tabName === 'participantes') {
+                loadParticipantes();
+            }
+        }
+
+        function updateTurma() {
+            // Get form values
+            var nomeTurma = document.getElementById('nomeTurma').value;
+            var diaSemana = document.getElementById('diaSemana').value;
+            var horarioInicial = document.getElementById('horarioInicial').value;
+            var horarioFinal = document.getElementById('horarioFinal').value;
+            var numeroVagas = document.getElementById('numeroVagas').value;
+
+            // Store values in localStorage
+            localStorage.setItem('nomeTurma', nomeTurma);
+            localStorage.setItem('diaSemana', diaSemana);
+            localStorage.setItem('horarioInicial', horarioInicial);
+            localStorage.setItem('horarioFinal', horarioFinal);
+            localStorage.setItem('numeroVagas', numeroVagas);
+
+            // Optional: Redirect to the other page to see changes
+            window.location.href = '/tela-aula/turma.html';
+        }
+
+        function loadParticipantes() {
+            const participantesList = document.getElementById('participantesList');
+            participantesList.innerHTML = ''; // Limpa a lista de participantes
+            const turmaParticipantes = JSON.parse(localStorage.getItem('turmaParticipantes')) || [];
+            turmaParticipantes.forEach(participante => {
+                const participantDiv = document.createElement('div');
+                participantDiv.classList.add('student');
+                participantDiv.innerHTML = `
+                    <img src="/tela-aula/img/icon-player.png" alt="User Icon">
+                    <span>${participante.name}</span>
+                `;
+                participantesList.appendChild(participantDiv);
+            });
+        }
+
+        // Carrega os dados da turma ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            var nomeTurma = localStorage.getItem('nomeTurma');
+            var diaSemana = localStorage.getItem('diaSemana');
+            var horarioInicial = localStorage.getItem('horarioInicial');
+            var horarioFinal = localStorage.getItem('horarioFinal');
+            var numeroVagas = localStorage.getItem('numeroVagas');
+
+            if (nomeTurma) {
+                document.getElementById('nomeTurma').value = nomeTurma;
+            }
+            if (diaSemana) {
+                document.getElementById('diaSemana').value = diaSemana;
+            }
+            if (horarioInicial) {
+                document.getElementById('horarioInicial').value = horarioInicial;
+            }
+            if (horarioFinal) {
+                document.getElementById('horarioFinal').value = horarioFinal;
+            }
+            if (numeroVagas) {
+                document.getElementById('numeroVagas').value = numeroVagas;
+            }
+        });
+    </script>
 </body>
 </html>
