@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '../adicionar-turma/adicionar-turma.html';
     });
 
+    // Redirecionar para a pagina inicial ao clicar no Logo
+    document.getElementById('redirectInit').addEventListener('click', function() {
+        window.location.href = '../rotina-treino/RotinaDeTreino.html';
+    });
+
+
     // Adiciona evento de clique aos botões de excluir
     const deleteButtons = document.querySelectorAll('.delete-button');
     deleteButtons.forEach(button => {

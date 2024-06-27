@@ -79,3 +79,9 @@ document.addEventListener('DOMContentLoaded', function () {
         container.insertBefore(formContainer, studentList);
     });
 });
+
+    // Redirecionar para a pagina inicial ao clicar no Logo
+    document.getElementById('redirectInit').addEventListener('click', function() {
+        window.location.href = '../rotina-treino/RotinaDeTreino.html';
+    });
+

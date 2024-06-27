@@ -61,6 +61,11 @@ function handleFormSubmit(event) {
     window.location.href = '../rotina-treino/RotinaDeTreino.html';
 }
 
+    // Redirecionar para a pagina inicial ao clicar no Logo
+    document.getElementById('redirectInit').addEventListener('click', function() {
+        window.location.href = '../rotina-treino/RotinaDeTreino.html';
+    });
+
 // Evento para carregar os dados do usuário quando a página é carregada
 document.addEventListener('DOMContentLoaded', function() {
     // Adicionando evento de submissão ao formulário de adicionar treino

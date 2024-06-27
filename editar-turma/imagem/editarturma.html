@@ -16,7 +16,7 @@
         </div>
         <div class="header">
             <img src="/tela-aula/img/menu-icon.png" alt="Menu">
-            <img src="/tela-aula/img/Vector-logo.png" alt="PUC FIT Logo">
+            <img src="/tela-aula/img/Vector-logo.png" alt="PUC FIT Logo" id="redirectInit">
             <div class="icons">
                 <img src="/tela-aula/img/clock-icon.png" alt="Clock">
                 <img src="/tela-aula/img/notification.png" alt="Notification">
@@ -134,6 +134,12 @@
                 document.getElementById('numeroVagas').value = numeroVagas;
             }
         });
+
+            // Redirecionar para a pagina inicial ao clicar no Logo
+    document.getElementById('redirectInit').addEventListener('click', function() {
+        window.location.href = '../../rotina-treino/RotinaDeTreino.html';
+    });
+
     </script>
 </body>
 </html>

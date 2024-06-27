@@ -24,9 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('selected');
         });
     });
-
-
-
+        // Redirecionar para a pagina inicial ao clicar no Logo
+        document.getElementById('redirectInit').addEventListener('click', function() {
+            window.location.href = '../rotina-treino/RotinaDeTreino.html';
+        });
+    
     // Adiciona um evento de clique ao botão 'rotinaButton'.
     rotinaButton.addEventListener('click', function () {
         // Chama a função 'redirectToAdicionarTurma' quando o botão é clicado.

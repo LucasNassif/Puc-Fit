@@ -16,7 +16,7 @@
         </div>
         <div class="header">
             <img src="img/menu-icon.png" alt="Menu">
-            <img src="img/Vector-logo.png" alt="PUC FIT Logo">
+            <img src="img/Vector-logo.png" alt="PUC FIT Logo" id="redirectInit">
             <div class="icons">
                 <img src="img/clock-icon.png" alt="Clock">
                 <img src="img/notification.png" alt="Notification">
@@ -116,6 +116,12 @@
                 addButton.style.display = 'block';
             }
         }
+
+            // Redirecionar para a pagina inicial ao clicar no Logo
+    document.getElementById('redirectInit').addEventListener('click', function() {
+        window.location.href = '../rotina-treino/RotinaDeTreino.html';
+    });
+
     </script>
 </body>
 </html>

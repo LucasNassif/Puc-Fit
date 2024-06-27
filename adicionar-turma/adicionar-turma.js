@@ -43,3 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Simulando o login automático ao carregar a página
     // simularLogin(); // Descomente se houver uma função de simulação de login
 });
+
+    // Redirecionar para a pagina inicial ao clicar no Logo
+    document.getElementById('redirectInit').addEventListener('click', function(){
+        window.location.href ='../rotina-treino/RotinaDeTreino.html'
+    });
+

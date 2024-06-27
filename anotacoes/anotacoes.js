@@ -21,6 +21,11 @@ function toggleMenu() {
     menu.classList.toggle('show');
 }
 
+    // Redirecionar para a pagina inicial ao clicar no Logo
+    document.getElementById('redirectInit').addEventListener('click', function() {
+        window.location.href = '../rotina-treino/RotinaDeTreino.html';
+    });
+
 // Função para adicionar uma nova nota
 function addNota() {
     const notaInput = document.getElementById('notaInput');

@@ -25,3 +25,4 @@ document.getElementById('addUserForm').addEventListener('submit', function(event
 
     window.location.href = 'turma.html';
 });
+
